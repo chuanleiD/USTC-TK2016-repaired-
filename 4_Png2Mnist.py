@@ -22,14 +22,15 @@ def mkdir_p(path):
 
 # Load from and save to
 mkdir_p('5_Mnist')
-Names = [['4_Png\Train','5_Mnist\\train']]
+Names = [['4_Png\Train','5_Mnist\\train'], ['4_Png\Test','5_Mnist\\test']]
 
 for name in Names:	
 	data_image = array('B')
 	data_label = array('B')
 
 	FileList = []
-	for dirname in os.listdir(name[0]): 
+	for dirname in os.listdir(name[0]):
+		print(dirname)
 		path = os.path.join(name[0],dirname)
 		for filename in os.listdir(path):
 			if filename.endswith(".png"):
@@ -38,7 +39,7 @@ for name in Names:
 	shuffle(FileList) # Usefull for further segmenting the validation set
 
 	for filename in FileList:
-		print filename
+		print(filename)
 		label = int(filename.split('\\')[2])
 		Im = Image.open(filename)
 		pixel = Im.load()

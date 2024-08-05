@@ -20,7 +20,9 @@ def getMatrixfrom_pcap(filename,width):
     hexst = binascii.hexlify(content)  
     fh = numpy.array([int(hexst[i:i+2],16) for i in range(0, len(hexst), 2)])  
     rn = len(fh)/width
-    fh = numpy.reshape(fh[:rn*width],(-1,width))  
+    #print(f"rn type: {type(rn)}, value: {rn}")
+    #print(f"width type: {type(width)}, value: {width}")
+    fh = numpy.reshape(fh[:int(rn)*width],(-1,width))
     fh = numpy.uint8(fh)
     return fh
 
@@ -36,6 +38,7 @@ def mkdir_p(path):
 paths = [['3_ProcessedSession\TrimedSession\Train', '4_Png\Train'],['3_ProcessedSession\TrimedSession\Test', '4_Png\Test']]
 for p in paths:
     for i, d in enumerate(os.listdir(p[0])):
+        print(f"Processing {p[0]} {d}")
         dir_full = os.path.join(p[1], str(i))
         mkdir_p(dir_full)
         for f in os.listdir(os.path.join(p[0], d)):

@@ -1,4 +1,4 @@
-# USTC-TK2016
+# USTC-TK2016（修复版本，能够正常运行）
 
 This repository is a toolkit called "USTC-TK2016", which is used to parse network traffic (`.pcap` file). Besides, the dataset is "USTC-TFC2016".
 

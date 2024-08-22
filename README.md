@@ -1,6 +1,6 @@
 # USTC-TK2016（修复版本，能够正常运行）
 
-This repository is a toolkit called "USTC-TK2016", which is used to parse network traffic (`.pcap` file). Besides, the dataset is "USTC-TFC2016".
+修复原版本的一些BUG，使之能够正常运行。This repository is a toolkit called "USTC-TK2016", which is used to parse network traffic (`.pcap` file). Besides, the dataset is "USTC-TFC2016".
 
 * The [`master`](https://github.com/yungshenglu/USTC-TK2016/tree/master) branch can only run on Windows environment.
 * The [`ubuntu`](https://github.com/yungshenglu/USTC-TK2016/tree/ubuntu) branch can run on Ubuntu Linux 16.04 LTS environment.
